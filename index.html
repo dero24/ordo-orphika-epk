@@ -526,32 +526,33 @@
                     <div>
                         <div class="bg-dark/70 rounded-2xl p-8 neon-border">
                             <h3 class="text-2xl font-display text-gold mb-6">SEND A MESSAGE</h3>
-                            <form class="space-y-6">
+                            <form action="https://formspree.io/f/movnzbkl" method="POST" class="space-y-6" id="contact-form">
                                 <div>
                                     <label class="block text-neon mb-2 font-tech">NAME</label>
-                                    <input type="text" class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <input type="text" name="name" required class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
                                 </div>
                                 <div>
                                     <label class="block text-neon mb-2 font-tech">EMAIL</label>
-                                    <input type="email" class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <input type="email" name="email" required class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
                                 </div>
                                 <div>
                                     <label class="block text-neon mb-2 font-tech">SUBJECT</label>
-                                    <select class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
-                                        <option>Booking Inquiry</option>
-                                        <option>Press Inquiry</option>
-                                        <option>General Question</option>
-                                        <option>Other</option>
+                                    <select name="subject" class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                        <option value="Booking Inquiry">Booking Inquiry</option>
+                                        <option value="Press Inquiry">Press Inquiry</option>
+                                        <option value="General Question">General Question</option>
+                                        <option value="Other">Other</option>
                                     </select>
                                 </div>
                                 <div>
                                     <label class="block text-neon mb-2 font-tech">MESSAGE</label>
-                                    <textarea rows="4" class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                                    <textarea name="message" rows="4" required class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
                                 </div>
                                 <button type="submit" class="w-full bg-accent hover:bg-red-800 text-white py-3 rounded-full transition-colors font-tech">
                                     SEND MESSAGE
                                 </button>
                             </form>
+                            <div id="form-status" class="mt-4 text-center hidden"></div>
                         </div>
                     </div>
                 </div>
@@ -606,11 +607,46 @@
             alert('Mobile menu would open here with full navigation links');
         });
 
-        // Simple form validation
-        document.querySelector('form').addEventListener('submit', function(e) {
+        // Form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will respond through esoteric channels.');
-            this.reset();
+            
+            const formData = new FormData(this);
+            const statusDiv = document.getElementById('form-status');
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            submitButton.textContent = 'SENDING...';
+            submitButton.disabled = true;
+            statusDiv.className = 'mt-4 text-center text-neon';
+            statusDiv.textContent = 'Sending your message through esoteric channels...';
+            statusDiv.classList.remove('hidden');
+            
+            // Submit to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    statusDiv.className = 'mt-4 text-center text-green-400';
+                    statusDiv.textContent = 'Message sent successfully! We will respond through esoteric channels.';
+                    this.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                statusDiv.className = 'mt-4 text-center text-red-400';
+                statusDiv.textContent = 'There was a problem sending your message. Please try again or contact us directly.';
+            })
+            .finally(() => {
+                submitButton.textContent = 'SEND MESSAGE';
+                submitButton.disabled = false;
+            });
         });
 
         // Tour date RSVP functionality
