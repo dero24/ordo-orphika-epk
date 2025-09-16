@@ -48,8 +48,7 @@
     </script>
     <style>
         .hero-pattern {
-            background: linear-gradient(135deg, rgba(10, 10, 15, 0.4) 0%, rgba(45, 27, 105, 0.3) 50%, rgba(10, 10, 15, 0.4) 100%), 
-                        url('assets/pics/The%20Orphic%20Eye%20-%203D.png');
+            background: url('assets/pics/The%20Orphic%20Eye%20-%203D.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -66,6 +65,26 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+        
+        .band-title-3d {
+            background: linear-gradient(135deg, #d4af37, #ffd700, #ffffff, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 
+                0 0 10px rgba(212, 175, 55, 0.8),
+                0 0 20px rgba(212, 175, 55, 0.6),
+                0 0 30px rgba(212, 175, 55, 0.4),
+                0 0 40px rgba(212, 175, 55, 0.2),
+                0 2px 0 rgba(212, 175, 55, 0.9),
+                0 4px 0 rgba(212, 175, 55, 0.7),
+                0 6px 0 rgba(212, 175, 55, 0.5),
+                0 8px 0 rgba(212, 175, 55, 0.3),
+                0 10px 0 rgba(212, 175, 55, 0.1),
+                0 0 0 1px rgba(0, 0, 0, 0.3),
+                0 0 0 2px rgba(212, 175, 55, 0.2);
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
         }
         .parallax {
             background-attachment: fixed;
@@ -108,7 +127,7 @@
     <section id="home" class="hero-pattern min-h-screen flex items-center justify-center pt-24">
         <div class="container mx-auto px-6 text-center">
             <div class="animate-float">
-                <h1 class="text-6xl md:text-8xl font-band text-white mb-6 tracking-wider">ORDO ORPHIKA</h1>
+                <h1 class="text-6xl md:text-8xl font-band mb-6 tracking-wider band-title-3d">ORDO ORPHIKA</h1>
             </div>
             <!--<p class="text-2xl md:text-3xl italic text-white mb-10 font-light">{Sub Title Placeholder}</p>-->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
