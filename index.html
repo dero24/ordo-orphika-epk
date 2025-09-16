@@ -47,7 +47,7 @@
     </script>
     <style>
         .hero-pattern {
-            background: linear-gradient(135deg, rgba(10, 10, 15, 0.85) 0%, rgba(45, 27, 105, 0.75) 50%, rgba(10, 10, 15, 0.85) 100%), 
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.4) 0%, rgba(45, 27, 105, 0.3) 50%, rgba(10, 10, 15, 0.4) 100%), 
                         url('assets/pics/The%20Orphic%20Eye%20-%203D.png');
             background-size: cover;
             background-position: center;
@@ -61,10 +61,18 @@
             box-shadow: 0 0 20px rgba(0, 255, 157, 0.1), inset 0 0 20px rgba(0, 255, 157, 0.05);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #d4af37, #ffffff, #00ff9d);
+            background: linear-gradient(135deg, #d4af37, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         .parallax {
             background-attachment: fixed;
@@ -107,7 +115,7 @@
     <section id="home" class="hero-pattern min-h-screen flex items-center justify-center pt-24">
         <div class="container mx-auto px-6 text-center">
             <div class="animate-float">
-                <h1 class="text-6xl md:text-8xl font-display font-bold text-white mb-6 tracking-tight">ORDO ORPHIKA</h1>
+                <h1 class="text-6xl md:text-8xl font-display font-bold mb-6 tracking-tight gradient-text">ORDO ORPHIKA</h1>
             </div>
             <!--<p class="text-2xl md:text-3xl italic text-white mb-10 font-light">{Sub Title Placeholder}</p>-->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
