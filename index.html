@@ -7,9 +7,34 @@
     <title>Ordo Orphika - Official Electronic Press Kit</title>
     <meta name="description" content="Official EPK for Ordo Orphika - Seattle's premier occult rock band. Bio, music, videos, tour dates, and press materials.">
     <meta name="keywords" content="Ordo Orphika, occult rock, Seattle band, music, EPK, press kit">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ordo Orphika - Official Electronic Press Kit">
+    <meta property="og:description" content="Official EPK for Ordo Orphika - Seattle's premier occult rock band. Bio, music, videos, tour dates, and press materials.">
+    <meta property="og:image" content="assets/pics/thumbnail.jpg">
+    <meta property="og:url" content="https://ordoorphika.github.io">
+    <meta property="og:site_name" content="Ordo Orphika">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ordo Orphika - Official Electronic Press Kit">
+    <meta name="twitter:description" content="Official EPK for Ordo Orphika - Seattle's premier occult rock band. Bio, music, videos, tour dates, and press materials.">
+    <meta name="twitter:image" content="assets/pics/thumbnail.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Anton:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Custom Font -->
+    <style>
+        @font-face {
+            font-family: 'Ghost Theater';
+            src: url('assets/pics/Ghost Theater DEMO.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
     <script>
         tailwind.config = {
             theme: {
@@ -26,7 +51,7 @@
                         display: ['Oswald', 'sans-serif'],
                         body: ['Inter', 'sans-serif'],
                         tech: ['JetBrains Mono', 'monospace'],
-                        band: ['Anton', 'sans-serif']
+                        band: ['Ghost Theater', 'Anton', 'sans-serif']
                     },
                     animation: {
                         'glow': 'glow 2s ease-in-out infinite alternate',
@@ -48,7 +73,8 @@
     </script>
     <style>
         .hero-pattern {
-            background: url('assets/pics/The%20Orphic%20Eye%20-%203D.png');
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.6) 0%, rgba(45, 27, 105, 0.4) 50%, rgba(10, 10, 15, 0.6) 100%), 
+                        url('assets/pics/The%20Orphic%20Eye%20-%203D.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -171,15 +197,6 @@
                             </div>
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-phone text-primary"></i>
-                                </div>
-                                <div>
-                                    <p class="text-neon font-tech">PHONE</p>
-                                    <a href="tel:+12065551234" class="text-white hover:text-accent transition-colors">+1 (206) 555-1234</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
                                     <i class="fas fa-map-marker-alt text-primary"></i>
                                 </div>
                                 <div>
@@ -189,7 +206,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-8">
+                        <!-- <div class="mt-8">
                             <h4 class="text-xl font-display text-gold mb-4">FOLLOW THE ORPHIC PATH</h4>
                             <div class="flex space-x-4">
                                 <a href="#" class="w-10 h-10 bg-dark rounded-full flex items-center justify-center text-gold hover:bg-accent transition-colors">
@@ -206,7 +223,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Contact Form -->
                     <div>
@@ -260,7 +277,7 @@
                     <a href="#" onclick="openBioPopup()" class="text-gray-400 hover:text-neon transition-colors">Bio</a>
                 </div>
                 <div class="text-gray-500 text-sm">
-                    <p>© 2025 Ordo Orphika. All rights reserved. Crafted with esoteric precision.</p>
+                    <p>© 2025 Ordo Orphika. All rights reserved.</p>
                     <p class="mt-2">Seattle, WA • <a href="#" class="hover:text-accent">Privacy Policy</a> • <a href="#" class="hover:text-accent">Terms of Service</a></p>
                 </div>
             </div>
