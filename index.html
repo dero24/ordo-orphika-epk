@@ -9,7 +9,7 @@
     <meta name="keywords" content="Ordo Orphika, occult rock, Seattle band, music, EPK, press kit">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700&family=IM+Fell+English:ital@0;1&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -23,9 +23,9 @@
                         deepPurple: "#2d1b69"
                     },
                     fontFamily: {
-                        display: ['Grenze Gotisch', 'serif'],
-                        body: ['IM Fell English', 'serif'],
-                        tech: ['Orbitron', 'monospace']
+                        display: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        tech: ['JetBrains Mono', 'monospace']
                     },
                     animation: {
                         'glow': 'glow 2s ease-in-out infinite alternate',
@@ -47,8 +47,8 @@
     </script>
     <style>
         .hero-pattern {
-            background: linear-gradient(135deg, rgba(10, 10, 15, 0.9) 0%, rgba(45, 27, 105, 0.8) 50%, rgba(10, 10, 15, 0.9) 100%), 
-                        url('assets/pics/band_pic.jpeg');
+            background: linear-gradient(135deg, rgba(10, 10, 15, 0.85) 0%, rgba(45, 27, 105, 0.75) 50%, rgba(10, 10, 15, 0.85) 100%), 
+                        url('assets/pics/The%20Orphic%20Eye%20-%203D.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -57,13 +57,14 @@
             background: linear-gradient(135deg, rgba(10, 10, 15, 0.95) 0%, rgba(45, 27, 105, 0.85) 100%);
         }
         .neon-border {
-            border: 1px solid #00ff9d;
-            box-shadow: 0 0 10px #00ff9d, inset 0 0 10px #00ff9d;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1), inset 0 0 20px rgba(0, 255, 157, 0.05);
         }
         .gradient-text {
-            background: linear-gradient(45deg, #d4af37, #9f1239, #00ff9d);
+            background: linear-gradient(135deg, #d4af37, #ffffff, #00ff9d);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         .parallax {
             background-attachment: fixed;
@@ -106,14 +107,14 @@
     <section id="home" class="hero-pattern min-h-screen flex items-center justify-center pt-24">
         <div class="container mx-auto px-6 text-center">
             <div class="animate-float">
-                <h1 class="text-7xl md:text-9xl font-display text-gold mb-6 drop-shadow-2xl">ORDO ORPHIKA</h1>
+                <h1 class="text-6xl md:text-8xl font-display font-bold text-white mb-6 tracking-tight">ORDO ORPHIKA</h1>
             </div>
             <!--<p class="text-2xl md:text-3xl italic text-white mb-10 font-light">{Sub Title Placeholder}</p>-->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="bg-accent hover:bg-red-800 text-white px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl font-tech text-center">
+                <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="bg-accent hover:bg-red-700 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl font-medium text-center">
                     LISTEN NOW
                 </a>
-                <button onclick="scrollToSection('contact')" class="border-2 border-gold hover:bg-gold hover:text-primary text-gold px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl font-tech">
+                <button onclick="scrollToSection('contact')" class="border border-gold/50 hover:border-gold hover:bg-gold/10 text-gold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-xl font-medium">
                     CONTACT US
                 </button>
             </div>
@@ -131,13 +132,13 @@
             <div class="absolute inset-0 bg-[url('assets/pics/band_pic.jpeg')] bg-cover bg-center"></div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">INITIATE CONTACT</h2>
+            <h2 class="text-4xl font-display font-bold text-white text-center mb-16">CONTACT</h2>
             
             <div class="max-w-4xl mx-auto">
                 <div class="grid md:grid-cols-2 gap-12">
                     <!-- Contact Information -->
                     <div>
-                        <h3 class="text-2xl font-display text-gold mb-6">BOOKING & INQUIRIES</h3>
+                        <h3 class="text-2xl font-display font-semibold text-white mb-6">BOOKING & INQUIRIES</h3>
                         <div class="space-y-4">
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center mr-4">
@@ -190,19 +191,19 @@
                     <!-- Contact Form -->
                     <div>
                         <div class="bg-dark/70 rounded-2xl p-8 neon-border">
-                            <h3 class="text-2xl font-display text-gold mb-6">SEND A MESSAGE</h3>
+                            <h3 class="text-2xl font-display font-semibold text-white mb-6">SEND A MESSAGE</h3>
                             <form action="https://formspree.io/f/movnzbkl" method="POST" class="space-y-6" id="contact-form">
                                 <div>
-                                    <label class="block text-neon mb-2 font-tech">NAME</label>
-                                    <input type="text" name="name" required class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <label class="block text-gray-300 mb-2 font-medium">NAME</label>
+                                    <input type="text" name="name" required class="w-full bg-primary/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-colors">
                                 </div>
                                 <div>
-                                    <label class="block text-neon mb-2 font-tech">EMAIL</label>
-                                    <input type="email" name="email" required class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <label class="block text-gray-300 mb-2 font-medium">EMAIL</label>
+                                    <input type="email" name="email" required class="w-full bg-primary/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-colors">
                                 </div>
                                 <div>
-                                    <label class="block text-neon mb-2 font-tech">SUBJECT</label>
-                                    <select name="subject" class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <label class="block text-gray-300 mb-2 font-medium">SUBJECT</label>
+                                    <select name="subject" class="w-full bg-primary/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-colors">
                                         <option value="Booking Inquiry">Booking Inquiry</option>
                                         <option value="Press Inquiry">Press Inquiry</option>
                                         <option value="General Question">General Question</option>
@@ -210,10 +211,10 @@
                                     </select>
                                 </div>
                                 <div>
-                                    <label class="block text-neon mb-2 font-tech">MESSAGE</label>
-                                    <textarea name="message" rows="4" required class="w-full bg-primary border border-gold/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                                    <label class="block text-gray-300 mb-2 font-medium">MESSAGE</label>
+                                    <textarea name="message" rows="4" required class="w-full bg-primary/50 border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-colors"></textarea>
                                 </div>
-                                <button type="submit" class="w-full bg-accent hover:bg-red-800 text-white py-3 rounded-full transition-colors font-tech">
+                                <button type="submit" class="w-full bg-accent hover:bg-red-700 text-white py-3 rounded-lg transition-colors font-medium">
                                     SEND MESSAGE
                                 </button>
                             </form>
@@ -231,7 +232,7 @@
             <div class="text-center">
                 <div class="mb-8 flex items-center justify-center space-x-3">
                     <img src="assets/pics/The%20Orphic%20Eye%20-%203D.png" alt="Ordo Orphika Logo" class="h-12 w-12 rounded-full">
-                    <span class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</span>
+                    <span class="text-2xl font-display font-bold text-white">ORDO ORPHIKA</span>
                 </div>
                 <div class="flex justify-center space-x-8 mb-8">
                     <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="text-gray-400 hover:text-neon transition-colors">Music</a>
@@ -253,7 +254,7 @@
                 <i class="fas fa-times"></i>
             </button>
             
-            <h2 class="text-4xl font-display text-gold text-center mb-8 gradient-text">THE ORPHIC MYSTERY</h2>
+            <h2 class="text-3xl font-display font-bold text-white text-center mb-8">THE ORPHIC MYSTERY</h2>
             
             <div class="grid lg:grid-cols-2 gap-8 items-start">
                 <div class="relative">
