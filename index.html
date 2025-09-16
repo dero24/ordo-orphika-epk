@@ -125,70 +125,71 @@
         </div>
     </section>
 
-    <!-- Bio Section -->
-    <section id="bio" class="section-pattern py-24 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-[url('assets/pics/band_pic.jpeg')] bg-cover bg-center"></div>
-        </div>
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">THE ORPHIC MYSTERY</h2>
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative">
-                    <div class="neon-border rounded-2xl p-2">
-                        <img src="assets/pics/Band%20Pic%202.jpeg" alt="Ordo Orphika band members performing" class="rounded-2xl w-full h-auto shadow-2xl" loading="lazy">
+    <!-- Collapsible Bio Section -->
+    <section id="bio" class="bg-primary py-12 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <button id="bio-toggle" class="w-full bg-dark/70 rounded-2xl p-6 neon-border hover:scale-[1.02] transition-all duration-300 text-left">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-3xl font-display text-gold gradient-text">THE ORPHIC MYSTERY</h2>
+                        <i id="bio-arrow" class="fas fa-chevron-down text-gold text-2xl transition-transform duration-300"></i>
                     </div>
-                    <div class="absolute -bottom-6 -right-6 bg-accent text-white p-4 rounded-2xl shadow-2xl">
-                        <p class="font-tech">EST. 2023 | SEATTLE</p>
-                    </div>
-                </div>
-                <div class="space-y-6">
-                    <p class="text-xl leading-relaxed">
-                        A word of wisdom in foolish times is worth its weight in gold. And so it goes with the philosophy of transmutation at the heart of <span class="text-gold">Ordo Orphika</span>.
-                    </p>
-                    <p class="text-xl leading-relaxed">
-                        Genre agnostic, equal parts improvisation and orchestration, and with a mind of cult like inclusivity. We aspire to celebrate the ascent, and perhaps, descent of man, with our little society dedicated to our oldest rebel, the first poet and musician, the great founder of the oldest mystery religion, <span class="text-accent">Orpheus</span>, the one who names the gods.
-                    </p>
-                    <p class="text-xl leading-relaxed">
-                        Join us on our epic journey of self reflection and exploration as we reach to get over ourselves and see the bigger picture of what brings us all together across identity and ages.
-                    </p>
-                    <p class="text-xl leading-relaxed">
-                        <span class="text-gold">Ordo Orphika</span> is a 5 piece band from Seattle, their influences span a number of genres ranging from rock, blues, funk, jazz, lo fi, dance music, and psychedelia. It features Seattle music veterans <span class="text-accent">Ian McKagan</span> (Kings of Cavalier, Morning Glory Revival) on guitar and <span class="text-accent">Woody Frank</span> (Whitney Monge, Map of the Woulds) on bass, as well as Saxophonist (Dr.) <span class="text-accent">Mathew Wooten</span>, Keys player <span class="text-accent">Jon Plaut</span>, and the handsome and mysterious drummer <span class="text-accent">Robby DeRosa</span> from the exotic far eastern land of New Jersey!
-                    </p>
-                    <p class="text-xl leading-relaxed">
-                        <span class="text-neon font-semibold">What will you hear?</span>
-                    </p>
-                    <p class="text-xl leading-relaxed">
-                        Rich harmonies, interweaving and genre bending soloist, lyrics rich with meaning, symbolism and mythology, both old and new. Diverse songs that aspire to take you on a journey to a higher place within yourself, or maybe just to find the lowest common denominator.
-                    </p>
-                    <p class="text-xl leading-relaxed text-accent font-semibold">
-                        Come and join the cult today! We have snakes!
-                    </p>
-                    
-                    <!-- Member Photos -->
-                    <div class="pt-8">
-                        <h4 class="text-2xl font-display text-gold mb-6 text-center">THE ORPHIC COUNCIL</h4>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center">
-                                <div class="neon-border rounded-2xl p-2 mb-4">
-                                    <img src="assets/pics/Ian.jpeg" alt="Ian McKagan - Guitar" class="rounded-xl w-full h-48 object-cover shadow-2xl">
-                                </div>
-                                <h5 class="text-lg font-display text-gold">Ian McKagan</h5>
-                                <p class="text-neon font-tech">Guitar</p>
+                </button>
+                
+                <div id="bio-content" class="hidden bg-dark/50 rounded-2xl p-8 neon-border mt-4">
+                    <div class="grid lg:grid-cols-2 gap-12 items-start">
+                        <div class="relative">
+                            <div class="neon-border rounded-2xl p-2">
+                                <img src="assets/pics/Band%20Pic%202.jpeg" alt="Ordo Orphika band members performing" class="rounded-2xl w-full h-auto shadow-2xl" loading="lazy">
                             </div>
-                            <div class="text-center">
-                                <div class="neon-border rounded-2xl p-2 mb-4">
-                                    <img src="assets/pics/Johnny.jpeg" alt="Johnny - Keys" class="rounded-xl w-full h-48 object-cover shadow-2xl">
-                                </div>
-                                <h5 class="text-lg font-display text-gold">Johnny</h5>
-                                <p class="text-neon font-tech">Keys</p>
+                            <div class="absolute -bottom-6 -right-6 bg-accent text-white p-4 rounded-2xl shadow-2xl">
+                                <p class="font-tech">EST. 2023 | SEATTLE</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="pt-6">
-                        <button onclick="scrollToSection('music')" class="bg-transparent border-2 border-neon text-neon hover:bg-neon hover:text-primary px-8 py-3 rounded-full transition-all duration-300 font-tech">
-                            EXPERIENCE THE SOUND
-                        </button>
+                        <div class="space-y-6">
+                            <p class="text-lg leading-relaxed">
+                                A word of wisdom in foolish times is worth its weight in gold. And so it goes with the philosophy of transmutation at the heart of <span class="text-gold">Ordo Orphika</span>.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                Genre agnostic, equal parts improvisation and orchestration, and with a mind of cult like inclusivity. We aspire to celebrate the ascent, and perhaps, descent of man, with our little society dedicated to our oldest rebel, the first poet and musician, the great founder of the oldest mystery religion, <span class="text-accent">Orpheus</span>, the one who names the gods.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                Join us on our epic journey of self reflection and exploration as we reach to get over ourselves and see the bigger picture of what brings us all together across identity and ages.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                <span class="text-gold">Ordo Orphika</span> is a 5 piece band from Seattle, their influences span a number of genres ranging from rock, blues, funk, jazz, lo fi, dance music, and psychedelia. It features Seattle music veterans <span class="text-accent">Ian McKagan</span> (Kings of Cavalier, Morning Glory Revival) on guitar and <span class="text-accent">Woody Frank</span> (Whitney Monge, Map of the Woulds) on bass, as well as Saxophonist (Dr.) <span class="text-accent">Mathew Wooten</span>, Keys player <span class="text-accent">Jon Plaut</span>, and the handsome and mysterious drummer <span class="text-accent">Robby DeRosa</span> from the exotic far eastern land of New Jersey!
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                <span class="text-neon font-semibold">What will you hear?</span>
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                Rich harmonies, interweaving and genre bending soloist, lyrics rich with meaning, symbolism and mythology, both old and new. Diverse songs that aspire to take you on a journey to a higher place within yourself, or maybe just to find the lowest common denominator.
+                            </p>
+                            <p class="text-lg leading-relaxed text-accent font-semibold">
+                                Come and join the cult today! We have snakes!
+                            </p>
+                            
+                            <!-- Member Photos -->
+                            <div class="pt-8">
+                                <h4 class="text-2xl font-display text-gold mb-6 text-center">THE ORPHIC COUNCIL</h4>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div class="text-center">
+                                        <div class="neon-border rounded-2xl p-2 mb-4">
+                                            <img src="assets/pics/Ian.jpeg" alt="Ian McKagan - Guitar" class="rounded-xl w-full h-48 object-cover shadow-2xl">
+                                        </div>
+                                        <h5 class="text-lg font-display text-gold">Ian McKagan</h5>
+                                        <p class="text-neon font-tech">Guitar</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="neon-border rounded-2xl p-2 mb-4">
+                                            <img src="assets/pics/Johnny.jpeg" alt="Johnny - Keys" class="rounded-xl w-full h-48 object-cover shadow-2xl">
+                                        </div>
+                                        <h5 class="text-lg font-display text-gold">Johnny</h5>
+                                        <p class="text-neon font-tech">Keys</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -435,6 +436,20 @@
                 const songName = this.closest('.flex').querySelector('h4').textContent;
                 alert(`Now playing: ${songName}\n(Audio player would activate here)`);
             });
+        });
+
+        // Bio section toggle functionality
+        document.getElementById('bio-toggle').addEventListener('click', function() {
+            const bioContent = document.getElementById('bio-content');
+            const bioArrow = document.getElementById('bio-arrow');
+            
+            if (bioContent.classList.contains('hidden')) {
+                bioContent.classList.remove('hidden');
+                bioArrow.style.transform = 'rotate(180deg)';
+            } else {
+                bioContent.classList.add('hidden');
+                bioArrow.style.transform = 'rotate(0deg)';
+            }
         });
     </script>
 </body>
