@@ -83,9 +83,9 @@
                     <span class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</span>
                 </a>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#music" class="hover:text-neon transition-all duration-300 hover:scale-110">Music</a>
+                    <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="hover:text-neon transition-all duration-300 hover:scale-110">Music</a>
                     <a href="#contact" class="hover:text-accent transition-all duration-300 hover:scale-110">Contact</a>
-                    <a href="#bio" class="hover:text-neon transition-all duration-300 hover:scale-110">Bio</a>
+                    <a href="#" onclick="openBioPopup()" class="hover:text-neon transition-all duration-300 hover:scale-110">Bio</a>
                 </div>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gold hover:text-accent transition-colors">
@@ -108,11 +108,11 @@
             <div class="animate-float">
                 <h1 class="text-7xl md:text-9xl font-display text-gold mb-6 drop-shadow-2xl">ORDO ORPHIKA</h1>
             </div>
-            <p class="text-2xl md:text-3xl italic text-white mb-10 font-light">Seattle's Esoteric Rock Ensemble</p>
+            <!--<p class="text-2xl md:text-3xl italic text-white mb-10 font-light">{Sub Title Placeholder}</p>-->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                <button onclick="scrollToSection('music')" class="bg-accent hover:bg-red-800 text-white px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl font-tech">
+                <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="bg-accent hover:bg-red-800 text-white px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl font-tech text-center">
                     LISTEN NOW
-                </button>
+                </a>
                 <button onclick="scrollToSection('contact')" class="border-2 border-gold hover:bg-gold hover:text-primary text-gold px-10 py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl font-tech">
                     CONTACT US
                 </button>
@@ -124,116 +124,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Collapsible Bio Section -->
-    <section id="bio" class="bg-primary py-12 relative">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <button id="bio-toggle" class="w-full bg-dark/70 rounded-2xl p-6 neon-border hover:scale-[1.02] transition-all duration-300 text-left">
-                    <div class="flex items-center justify-between">
-                        <h2 class="text-3xl font-display text-gold gradient-text">THE ORPHIC MYSTERY</h2>
-                        <i id="bio-arrow" class="fas fa-chevron-down text-gold text-2xl transition-transform duration-300"></i>
-                    </div>
-                </button>
-                
-                <div id="bio-content" class="hidden bg-dark/50 rounded-2xl p-8 neon-border mt-4">
-                    <div class="grid lg:grid-cols-2 gap-12 items-start">
-                        <div class="relative">
-                            <div class="neon-border rounded-2xl p-2">
-                                <img src="assets/pics/Band%20Pic%202.jpeg" alt="Ordo Orphika band members performing" class="rounded-2xl w-full h-auto shadow-2xl" loading="lazy">
-                            </div>
-                            <div class="absolute -bottom-6 -right-6 bg-accent text-white p-4 rounded-2xl shadow-2xl">
-                                <p class="font-tech">EST. 2023 | SEATTLE</p>
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <p class="text-lg leading-relaxed">
-                                A word of wisdom in foolish times is worth its weight in gold. And so it goes with the philosophy of transmutation at the heart of <span class="text-gold">Ordo Orphika</span>.
-                            </p>
-                            <p class="text-lg leading-relaxed">
-                                Genre agnostic, equal parts improvisation and orchestration, and with a mind of cult like inclusivity. We aspire to celebrate the ascent, and perhaps, descent of man, with our little society dedicated to our oldest rebel, the first poet and musician, the great founder of the oldest mystery religion, <span class="text-accent">Orpheus</span>, the one who names the gods.
-                            </p>
-                            <p class="text-lg leading-relaxed">
-                                Join us on our epic journey of self reflection and exploration as we reach to get over ourselves and see the bigger picture of what brings us all together across identity and ages.
-                            </p>
-                            <p class="text-lg leading-relaxed">
-                                <span class="text-gold">Ordo Orphika</span> is a 5 piece band from Seattle, their influences span a number of genres ranging from rock, blues, funk, jazz, lo fi, dance music, and psychedelia. It features Seattle music veterans <span class="text-accent">Ian McKagan</span> (Kings of Cavalier, Morning Glory Revival) on guitar and <span class="text-accent">Woody Frank</span> (Whitney Monge, Map of the Woulds) on bass, as well as Saxophonist (Dr.) <span class="text-accent">Mathew Wooten</span>, Keys player <span class="text-accent">Jon Plaut</span>, and the handsome and mysterious drummer <span class="text-accent">Robby DeRosa</span> from the exotic far eastern land of New Jersey!
-                            </p>
-                            <p class="text-lg leading-relaxed">
-                                <span class="text-neon font-semibold">What will you hear?</span>
-                            </p>
-                            <p class="text-lg leading-relaxed">
-                                Rich harmonies, interweaving and genre bending soloist, lyrics rich with meaning, symbolism and mythology, both old and new. Diverse songs that aspire to take you on a journey to a higher place within yourself, or maybe just to find the lowest common denominator.
-                            </p>
-                            <p class="text-lg leading-relaxed text-accent font-semibold">
-                                Come and join the cult today! We have snakes!
-                            </p>
-                            
-                            <!-- Member Photos -->
-                            <div class="pt-8">
-                                <h4 class="text-2xl font-display text-gold mb-6 text-center">THE ORPHIC COUNCIL</h4>
-                                <div class="grid grid-cols-2 gap-6">
-                                    <div class="text-center">
-                                        <div class="neon-border rounded-2xl p-2 mb-4">
-                                            <img src="assets/pics/Ian.jpeg" alt="Ian McKagan - Guitar" class="rounded-xl w-full h-48 object-cover shadow-2xl">
-                                        </div>
-                                        <h5 class="text-lg font-display text-gold">Ian McKagan</h5>
-                                        <p class="text-neon font-tech">Guitar</p>
-                                    </div>
-                                    <div class="text-center">
-                                        <div class="neon-border rounded-2xl p-2 mb-4">
-                                            <img src="assets/pics/Johnny.jpeg" alt="Johnny - Keys" class="rounded-xl w-full h-48 object-cover shadow-2xl">
-                                        </div>
-                                        <h5 class="text-lg font-display text-gold">Johnny</h5>
-                                        <p class="text-neon font-tech">Keys</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Music Section -->
-    <section id="music" class="bg-primary py-24 relative">
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0 bg-[url('assets/pics/band_pic.jpeg')] bg-cover bg-center"></div>
-        </div>
-        <div class="container mx-auto px-6 relative z-10">
-            <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">ODYSSEY'S ORIGIN</h2>
-            
-            <!-- Featured Album -->
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-dark/70 rounded-2xl p-8 neon-border hover:scale-[1.02] transition-transform duration-300">
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div class="text-center md:text-left">
-                            <img src="assets/pics/The%20Orphic%20Eye%20-%203D.png" alt="Odyssey's Origin Album Cover" class="rounded-2xl w-full max-w-md mx-auto shadow-2xl" loading="lazy">
-                        </div>
-                        <div class="space-y-6">
-                            <h3 class="text-4xl font-display text-gold mb-3">Odyssey's Origin</h3>
-                            <p class="text-neon mb-4 font-tech text-xl">Debut Album • 2024</p>
-                            <p class="text-gray-300 text-lg leading-relaxed">
-                                A journey through mystical realms where ancient wisdom meets modern sound. 
-                                Experience the full spectrum of Ordo Orphika's musical vision in this 
-                                genre-bending exploration of consciousness and transformation.
-                            </p>
-                            <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                                <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="bg-gold hover:bg-yellow-600 text-primary px-8 py-4 rounded-full text-center transition-colors font-tech text-lg">
-                                    <i class="fab fa-soundcloud mr-2"></i> Listen on SoundCloud
-                                </a>
-                                <a href="#contact" class="border-2 border-neon text-neon hover:bg-neon hover:text-primary px-8 py-4 rounded-full text-center transition-colors font-tech text-lg">
-                                    <i class="fas fa-envelope mr-2"></i> Contact for Booking
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- Contact Section -->
     <section id="contact" class="bg-primary py-24 relative">
@@ -344,9 +234,9 @@
                     <span class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</span>
                 </div>
                 <div class="flex justify-center space-x-8 mb-8">
-                    <a href="#music" class="text-gray-400 hover:text-neon transition-colors">Music</a>
+                    <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="text-gray-400 hover:text-neon transition-colors">Music</a>
                     <a href="#contact" class="text-gray-400 hover:text-accent transition-colors">Contact</a>
-                    <a href="#bio" class="text-gray-400 hover:text-neon transition-colors">Bio</a>
+                    <a href="#" onclick="openBioPopup()" class="text-gray-400 hover:text-neon transition-colors">Bio</a>
                 </div>
                 <div class="text-gray-500 text-sm">
                     <p>© 2025 Ordo Orphika. All rights reserved. Crafted with esoteric precision.</p>
@@ -355,6 +245,72 @@
             </div>
         </div>
     </footer>
+
+    <!-- Bio Popup -->
+    <div id="bio-popup" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-dark/95 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto neon-border relative">
+            <button onclick="closeBioPopup()" class="absolute top-4 right-4 text-gold hover:text-accent text-3xl transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="text-4xl font-display text-gold text-center mb-8 gradient-text">THE ORPHIC MYSTERY</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8 items-start">
+                <div class="relative">
+                    <div class="neon-border rounded-2xl p-2">
+                        <img src="assets/pics/Band%20Pic%202.jpeg" alt="Ordo Orphika band members performing" class="rounded-2xl w-full h-auto shadow-2xl" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 bg-accent text-white p-3 rounded-xl shadow-2xl">
+                        <p class="font-tech text-sm">EST. 2023 | SEATTLE</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-base leading-relaxed">
+                        A word of wisdom in foolish times is worth its weight in gold. And so it goes with the philosophy of transmutation at the heart of <span class="text-gold">Ordo Orphika</span>.
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Genre agnostic, equal parts improvisation and orchestration, and with a mind of cult like inclusivity. We aspire to celebrate the ascent, and perhaps, descent of man, with our little society dedicated to our oldest rebel, the first poet and musician, the great founder of the oldest mystery religion, <span class="text-accent">Orpheus</span>, the one who names the gods.
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Join us on our epic journey of self reflection and exploration as we reach to get over ourselves and see the bigger picture of what brings us all together across identity and ages.
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        <span class="text-gold">Ordo Orphika</span> is a 5 piece band from Seattle, their influences span a number of genres ranging from rock, blues, funk, jazz, lo fi, dance music, and psychedelia. It features Seattle music veterans <span class="text-accent">Ian McKagan</span> (Kings of Cavalier, Morning Glory Revival) on guitar and <span class="text-accent">Woody Frank</span> (Whitney Monge, Map of the Woulds) on bass, as well as Saxophonist (Dr.) <span class="text-accent">Mathew Wooten</span>, Keys player <span class="text-accent">Jon Plaut</span>, and the handsome and mysterious drummer <span class="text-accent">Robby DeRosa</span> from the exotic far eastern land of New Jersey!
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        <span class="text-neon font-semibold">What will you hear?</span>
+                    </p>
+                    <p class="text-base leading-relaxed">
+                        Rich harmonies, interweaving and genre bending soloist, lyrics rich with meaning, symbolism and mythology, both old and new. Diverse songs that aspire to take you on a journey to a higher place within yourself, or maybe just to find the lowest common denominator.
+                    </p>
+                    <p class="text-base leading-relaxed text-accent font-semibold">
+                        Come and join the cult today! We have snakes!
+                    </p>
+                    
+                    <!-- Member Photos -->
+                    <div class="pt-6">
+                        <h4 class="text-xl font-display text-gold mb-4 text-center">THE ORPHIC COUNCIL</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="neon-border rounded-xl p-2 mb-3">
+                                    <img src="assets/pics/Ian.jpeg" alt="Ian McKagan - Guitar" class="rounded-lg w-full h-32 object-cover shadow-xl">
+                                </div>
+                                <h5 class="text-sm font-display text-gold">Ian McKagan</h5>
+                                <p class="text-neon font-tech text-xs">Guitar</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="neon-border rounded-xl p-2 mb-3">
+                                    <img src="assets/pics/Johnny.jpeg" alt="Johnny - Keys" class="rounded-lg w-full h-32 object-cover shadow-xl">
+                                </div>
+                                <h5 class="text-sm font-display text-gold">Johnny</h5>
+                                <p class="text-neon font-tech text-xs">Keys</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Smooth scrolling for navigation
@@ -438,17 +394,28 @@
             });
         });
 
-        // Bio section toggle functionality
-        document.getElementById('bio-toggle').addEventListener('click', function() {
-            const bioContent = document.getElementById('bio-content');
-            const bioArrow = document.getElementById('bio-arrow');
-            
-            if (bioContent.classList.contains('hidden')) {
-                bioContent.classList.remove('hidden');
-                bioArrow.style.transform = 'rotate(180deg)';
-            } else {
-                bioContent.classList.add('hidden');
-                bioArrow.style.transform = 'rotate(0deg)';
+        // Bio popup functionality
+        function openBioPopup() {
+            document.getElementById('bio-popup').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeBioPopup() {
+            document.getElementById('bio-popup').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close popup when clicking outside
+        document.getElementById('bio-popup').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBioPopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBioPopup();
             }
         });
     </script>
