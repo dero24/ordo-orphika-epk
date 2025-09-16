@@ -129,10 +129,11 @@
                     <img src="assets/pics/The%20Orphic%20Eye%20-%203D.png" alt="Ordo Orphika Logo" class="h-10 w-10 rounded-full">
                     <span class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</span>
                 </a>
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden md:flex space-x-6 items-center">
                     <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="hover:text-neon transition-all duration-300 hover:scale-110">Music</a>
                     <a href="#contact" class="hover:text-accent transition-all duration-300 hover:scale-110">Contact</a>
                     <a href="#" onclick="openBioPopup()" class="hover:text-neon transition-all duration-300 hover:scale-110">Bio</a>
+                    <a href="#tour" class="bg-gold text-primary px-4 py-2 rounded-full hover:scale-105 transition-all duration-200 font-tech">TOUR</a>
                 </div>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gold hover:text-accent transition-colors">
@@ -141,13 +142,37 @@
                     <a href="#" class="text-gold hover:text-accent transition-colors">
                         <i class="fab fa-bandcamp text-xl"></i>
                     </a>
-                    <button class="md:hidden text-gold text-2xl">
+                    <button id="mobile-menu-button" class="md:hidden text-gold text-2xl focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu (hidden on md+) -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
+        <div id="mobile-menu-backdrop" class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute top-0 right-0 w-3/4 max-w-xs h-full bg-primary/95 p-6 shadow-2xl">
+            <div class="flex items-center justify-between mb-8">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/pics/The%20Orphic%20Eye%20-%203D.png" alt="Logo" class="h-10 w-10 rounded-full">
+                    <span class="text-xl font-display text-gold">ORDO ORPHIKA</span>
+                </div>
+                <button id="mobile-menu-close" class="text-gold text-2xl focus:outline-none" aria-label="Close menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4" aria-label="Mobile navigation">
+                <a href="#bio" class="text-white hover:text-accent text-lg">Bio</a>
+                <a href="#music" class="text-white hover:text-neon text-lg">Music</a>
+                <a href="#videos" class="text-white hover:text-accent text-lg">Videos</a>
+                <a href="#tour" class="bg-gold text-primary px-4 py-2 rounded-full w-max">TOUR</a>
+                <a href="#press" class="text-white hover:text-accent text-lg">Press</a>
+                <a href="#contact" class="text-white hover:text-neon text-lg">Contact</a>
+            </nav>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-pattern min-h-screen flex items-center justify-center pt-24">
@@ -180,10 +205,10 @@
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-4xl font-display font-bold text-white text-center mb-16">CONTACT</h2>
             
-            <div class="max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12">
+                <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <!-- Contact Information -->
-                    <div>
+                    <div class="min-w-0 mb-8 md:mb-0">
                         <h3 class="text-2xl font-display font-semibold text-white mb-6">BOOKING & INQUIRIES</h3>
                         <div class="space-y-4">
                             <div class="flex items-center">
@@ -226,8 +251,8 @@
                     </div> -->
 
                     <!-- Contact Form -->
-                    <div>
-                        <div class="bg-dark/70 rounded-2xl p-8 neon-border">
+                    <div class="min-w-0">
+                        <div class="bg-dark/70 rounded-2xl p-6 md:p-8 neon-border">
                             <h3 class="text-2xl font-display font-semibold text-white mb-6">SEND A MESSAGE</h3>
                             <form action="https://formspree.io/f/movnzbkl" method="POST" class="space-y-6" id="contact-form">
                                 <div>
@@ -369,10 +394,40 @@
             });
         });
 
-        // Mobile menu toggle (simplified for demo)
-        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
-            alert('Mobile menu would open here with full navigation links');
-        });
+        // Mobile menu toggle: open/close, backdrop click, and auto-close on link click
+        (function() {
+            const openBtn = document.getElementById('mobile-menu-button');
+            const closeBtn = document.getElementById('mobile-menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const backdrop = document.getElementById('mobile-menu-backdrop');
+
+            function openMenu() {
+                if (!mobileMenu) return;
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                openBtn.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                if (!mobileMenu) return;
+                mobileMenu.classList.add('hidden');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                openBtn.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = 'auto';
+            }
+
+            if (openBtn) openBtn.addEventListener('click', openMenu);
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            if (backdrop) backdrop.addEventListener('click', closeMenu);
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function() {
+                    closeMenu();
+                });
+            });
+        })();
 
         // Form submission handling
         document.getElementById('contact-form').addEventListener('submit', function(e) {
