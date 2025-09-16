@@ -9,7 +9,7 @@
     <meta name="keywords" content="Ordo Orphika, occult rock, Seattle band, music, EPK, press kit">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Anton:wght@400&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -23,9 +23,10 @@
                         deepPurple: "#2d1b69"
                     },
                     fontFamily: {
-                        display: ['Space Grotesk', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
                         body: ['Inter', 'sans-serif'],
-                        tech: ['JetBrains Mono', 'monospace']
+                        tech: ['JetBrains Mono', 'monospace'],
+                        band: ['Anton', 'sans-serif']
                     },
                     animation: {
                         'glow': 'glow 2s ease-in-out infinite alternate',
@@ -61,18 +62,10 @@
             box-shadow: 0 0 20px rgba(0, 255, 157, 0.1), inset 0 0 20px rgba(0, 255, 157, 0.05);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #d4af37, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+            background: linear-gradient(135deg, #d4af37, #ffffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            background-size: 300% 300%;
-            animation: gradientShift 4s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
         .parallax {
             background-attachment: fixed;
@@ -115,7 +108,7 @@
     <section id="home" class="hero-pattern min-h-screen flex items-center justify-center pt-24">
         <div class="container mx-auto px-6 text-center">
             <div class="animate-float">
-                <h1 class="text-6xl md:text-8xl font-display font-bold mb-6 tracking-tight gradient-text">ORDO ORPHIKA</h1>
+                <h1 class="text-6xl md:text-8xl font-band text-white mb-6 tracking-wider">ORDO ORPHIKA</h1>
             </div>
             <!--<p class="text-2xl md:text-3xl italic text-white mb-10 font-light">{Sub Title Placeholder}</p>-->
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
