@@ -48,7 +48,7 @@
     <style>
         .hero-pattern {
             background: linear-gradient(135deg, rgba(10, 10, 15, 0.9) 0%, rgba(45, 27, 105, 0.8) 50%, rgba(10, 10, 15, 0.9) 100%), 
-                        url('https://picsum.photos/1920/1080?random=1');
+                        url('assets/band_pic.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -78,7 +78,10 @@
     <nav class="fixed w-full bg-primary/95 backdrop-blur-md z-50 shadow-2xl border-b border-gold/20">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#home" class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</a>
+                <a href="#home" class="flex items-center space-x-3">
+                    <img src="assets/pics/The Orphic Eye - 3D.png" alt="Ordo Orphika Logo" class="h-10 w-10 rounded-full">
+                    <span class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</span>
+                </a>
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#bio" class="hover:text-accent transition-all duration-300 hover:scale-110">Bio</a>
                     <a href="#music" class="hover:text-neon transition-all duration-300 hover:scale-110">Music</a>
@@ -126,17 +129,16 @@
     </section>
 
     <!-- Bio Section -->
-    <!-- Bio Section -->
     <section id="bio" class="section-pattern py-24 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-[url('https://picsum.photos/2000/1000?random=10')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-[url('assets/band_pic.jpeg')] bg-cover bg-center"></div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">THE ORPHIC MYSTERY</h2>
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
                     <div class="neon-border rounded-2xl p-2">
-                        <img src="https://picsum.photos/600/400?random=3" alt="Ordo Orphika band members performing" class="rounded-2xl w-full h-auto shadow-2xl" loading="lazy">
+                        <img src="assets/pics/Band Pic 2.jpeg" alt="Ordo Orphika band members performing" class="rounded-2xl w-full h-auto shadow-2xl" loading="lazy">
                     </div>
                     <div class="absolute -bottom-6 -right-6 bg-accent text-white p-4 rounded-2xl shadow-2xl">
                         <p class="font-tech">EST. 2023 | SEATTLE</p>
@@ -164,6 +166,28 @@
                     <p class="text-xl leading-relaxed text-accent font-semibold">
                         Come and join the cult today! We have snakes!
                     </p>
+                    
+                    <!-- Member Photos -->
+                    <div class="pt-8">
+                        <h4 class="text-2xl font-display text-gold mb-6 text-center">THE ORPHIC COUNCIL</h4>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="neon-border rounded-2xl p-2 mb-4">
+                                    <img src="assets/pics/Ian.jpeg" alt="Ian McKagan - Guitar" class="rounded-xl w-full h-48 object-cover shadow-2xl">
+                                </div>
+                                <h5 class="text-lg font-display text-gold">Ian McKagan</h5>
+                                <p class="text-neon font-tech">Guitar</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="neon-border rounded-2xl p-2 mb-4">
+                                    <img src="assets/pics/Johnny.jpeg" alt="Johnny - Keys" class="rounded-xl w-full h-48 object-cover shadow-2xl">
+                                </div>
+                                <h5 class="text-lg font-display text-gold">Johnny</h5>
+                                <p class="text-neon font-tech">Keys</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="pt-6">
                         <button onclick="scrollToSection('music')" class="bg-transparent border-2 border-neon text-neon hover:bg-neon hover:text-primary px-8 py-3 rounded-full transition-all duration-300 font-tech">
                             EXPERIENCE THE SOUND
@@ -177,7 +201,7 @@
     <!-- Music Section -->
     <section id="music" class="bg-primary py-24 relative">
         <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0 bg-[url('https://picsum.photos/2000/1000?random=20')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-[url('assets/band_pic.jpeg')] bg-cover bg-center"></div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">SONIC INVOCATIONS</h2>
@@ -186,7 +210,7 @@
                 <!-- Album 1 -->
                 <div class="bg-dark/50 rounded-2xl p-6 neon-border hover:scale-105 transition-transform duration-300">
                     <div class="mb-6">
-                        <img src="https://picsum.photos/400/400?random=4" alt="Arcana Obscura Album Cover" class="rounded-2xl w-full shadow-2xl" loading="lazy">
+                        <img src="assets/pics/The Orphic Eye - 3D.png" alt="Arcana Obphika Album Cover" class="rounded-2xl w-full shadow-2xl" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-display text-gold mb-3">Arcana Obphika</h3>
                     <p class="text-neon mb-4 font-tech">Debut Album • 2024</p>
@@ -195,8 +219,8 @@
                         <a href="#" class="bg-accent hover:bg-red-800 text-white text-center py-2 rounded-full transition-colors">
                             <i class="fab fa-spotify mr-2"></i> Spotify
                         </a>
-                        <a href="#" class="bg-gold hover:bg-yellow-600 text-primary text-center py-2 rounded-full transition-colors">
-                            <i class="fab fa-bandcamp mr-2"></i> Bandcamp
+                        <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="bg-gold hover:bg-yellow-600 text-primary text-center py-2 rounded-full transition-colors">
+                            <i class="fab fa-soundcloud mr-2"></i> SoundCloud
                         </a>
                     </div>
                 </div>
@@ -204,7 +228,7 @@
                 <!-- Single 1 -->
                 <div class="bg-dark/50 rounded-2xl p-6 neon-border hover:scale-105 transition-transform duration-300">
                     <div class="mb-6">
-                        <img src="https://picsum.photos/400/400?random=5" alt="Veil of Isis Single Cover" class="rounded-2xl w-full shadow-2xl" loading="lazy">
+                        <img src="assets/pics/The Orphic Eye - 3D.png" alt="Veil of Isis Single Cover" class="rounded-2xl w-full shadow-2xl" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-display text-gold mb-3">Veil of Isis</h3>
                     <p class="text-neon mb-4 font-tech">Single • 2024</p>
@@ -222,7 +246,7 @@
                 <!-- Single 2 -->
                 <div class="bg-dark/50 rounded-2xl p-6 neon-border hover:scale-105 transition-transform duration-300">
                     <div class="mb-6">
-                        <img src="https://picsum.photos/400/400?random=6" alt="Crimson Altar Single Cover" class="rounded-2xl w-full shadow-2xl" loading="lazy">
+                        <img src="assets/pics/The Orphic Eye - 3D.png" alt="Crimson Altar Single Cover" class="rounded-2xl w-full shadow-2xl" loading="lazy">
                     </div>
                     <h3 class="text-2xl font-display text-gold mb-3">Crimson Altar</h3>
                     <p class="text-neon mb-4 font-tech">Single • 2023</p>
@@ -231,7 +255,7 @@
                         <a href="#" class="bg-accent hover:bg-red-800 text-white text-center py-2 rounded-full transition-colors">
                             <i class="fab fa-apple mr-2"></i> Apple Music
                         </a>
-                        <a href="#" class="bg-gold hover:bg-yellow-600 text-primary text-center py-2 rounded-full transition-colors">
+                        <a href="https://soundcloud.com/ordo-orphika/albums" target="_blank" class="bg-gold hover:bg-yellow-600 text-primary text-center py-2 rounded-full transition-colors">
                             <i class="fab fa-soundcloud mr-2"></i> SoundCloud
                         </a>
                     </div>
@@ -348,7 +372,7 @@
     <!-- Tour Dates Section -->
     <section id="tour" class="bg-primary py-24 relative">
         <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0 bg-[url('https://picsum.photos/2000/1000?random=30')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-[url('assets/band_pic.jpeg')] bg-cover bg-center"></div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">UPCOMING RITUALS</h2>
@@ -476,7 +500,7 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-primary py-24 relative">
         <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0 bg-[url('https://picsum.photos/2000/1000?random=40')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-[url('assets/band_pic.jpeg')] bg-cover bg-center"></div>
         </div>
         <div class="container mx-auto px-6 relative z-10">
             <h2 class="text-5xl font-display text-gold text-center mb-16 gradient-text">INITIATE CONTACT</h2>
@@ -577,7 +601,8 @@
     <footer class="bg-dark py-12 border-t border-gold/20">
         <div class="container mx-auto px-6">
             <div class="text-center">
-                <div class="mb-8">
+                <div class="mb-8 flex items-center justify-center space-x-3">
+                    <img src="assets/pics/The Orphic Eye - 3D.png" alt="Ordo Orphika Logo" class="h-12 w-12 rounded-full">
                     <span class="text-3xl font-display text-gold animate-glow">ORDO ORPHIKA</span>
                 </div>
                 <div class="flex justify-center space-x-8 mb-8">
